@@ -1,25 +1,26 @@
-/* GLOBAL RESET + FONTS */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* BASE */
 body {
   font-family: 'Poppins', sans-serif;
   background: #ffffff;
   color: #1e293b;
   line-height: 1.7;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 /* NAVBAR */
 .navbar {
-  width: 100%;
   background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
   position: sticky;
   top: 0;
-  z-index: 999;
-  border-bottom: 1px solid #e2e8f0;
+  z-index: 1000;
 }
 
 .nav-container {
@@ -32,27 +33,33 @@ body {
 }
 
 .logo {
-  font-size: 1.3rem;
   font-weight: 700;
-  color: #0f172a;
+  font-size: 1.2rem;
 }
 
 .nav-links a {
-  margin-left: 26px;
+  margin-left: 22px;
   text-decoration: none;
   font-weight: 500;
   color: #334155;
-  transition: color 0.25s ease;
 }
 
 .nav-links a:hover {
   color: #2563eb;
 }
 
+.theme-toggle {
+  margin-left: 18px;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
 /* HERO */
 .hero {
-  padding: 80px 24px;
   background: #f8fafc;
+  padding: 90px 24px;
 }
 
 .hero-grid {
@@ -60,57 +67,48 @@ body {
   margin: auto;
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 48px;
-  align-items: top;
+  gap: 50px;
 }
 
-.lead-badge {
+.badge {
   background: #14b8a6;
-  color: white;
+  color: #ffffff;
   padding: 6px 14px;
   border-radius: 999px;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 600;
-  margin-bottom: 12px;
   display: inline-block;
+  margin-bottom: 14px;
 }
 
 .hero-text h1 {
   font-size: 2.8rem;
   font-weight: 700;
-  margin-bottom: 8px;
-  color: #0f172a;
 }
 
-.hero-text .subtitle {
+.subtitle {
   font-size: 1.2rem;
   color: #2563eb;
-  font-weight: 500;
-  margin-bottom: 18px;
+  margin: 10px 0 18px;
 }
 
 .hero-summary {
-  margin-bottom: 28px;
-  font-size: 1rem;
   color: #334155;
+  margin-bottom: 28px;
 }
 
+/* BUTTONS */
 .hero-buttons .btn {
   padding: 12px 22px;
-  border-radius: 6px;
+  border-radius: 8px;
   font-weight: 600;
   text-decoration: none;
-  margin-right: 12px;
-  transition: all 0.25s ease;
+  margin-right: 10px;
 }
 
 .btn.primary {
   background: #2563eb;
-  color: white;
-}
-
-.btn.primary:hover {
-  background: #1e40af;
+  color: #ffffff;
 }
 
 .btn.outline {
@@ -118,102 +116,69 @@ body {
   color: #2563eb;
 }
 
-.btn.outline:hover {
-  background: #2563eb;
-  color: white;
-}
-
-/* HERO INFO CARD */
+/* INFO CARD */
 .hero-info-card {
   background: #ffffff;
   border: 1px solid #e2e8f0;
   border-radius: 12px;
   padding: 22px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-.info-item {
-  margin-bottom: 14px;
-}
-
-.info-label {
-  font-weight: 600;
-  color: #2563eb;
 }
 
 /* SECTIONS */
 .section {
-  padding: 70px 24px;
+  max-width: 1100px;
+  margin: auto;
+  padding: 80px 24px;
 }
 
 .section h2 {
   font-size: 1.9rem;
-  font-weight: 700;
   margin-bottom: 30px;
-  color: #0f172a;
 }
 
-/* EXPERIENCE */
-.experience-section .exp-card {
+/* CARDS */
+.card {
   background: #ffffff;
   border: 1px solid #e2e8f0;
-  border-radius: 12px;
-  padding: 24px;
+  border-radius: 14px;
+  padding: 26px;
   margin-bottom: 26px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
-.exp-card h3 {
-  font-size: 1.15rem;
-  font-weight: 600;
+.card h3 {
   color: #2563eb;
 }
 
-.exp-role {
+.card span {
   font-size: 0.9rem;
   color: #64748b;
-  margin-bottom: 12px;
 }
 
-.exp-list li {
-  margin-bottom: 8px;
-  list-style: disc inside;
+.card ul {
+  margin-top: 14px;
+  padding-left: 18px;
 }
 
 /* SKILLS */
+.light {
+  background: #f1f5f9;
+}
+
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(120px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 14px;
 }
 
 .skills-grid span {
-  background: #eef2ff;
+  background: #e0e7ff;
   padding: 10px;
   border-radius: 999px;
   text-align: center;
-  font-size: 0.95rem;
   font-weight: 500;
-  color: #1e3a8a;
 }
 
 /* CONTACT */
-.contact-section p {
-  margin-bottom: 12px;
-  font-size: 1rem;
-}
-
-.contact-section a {
+.contact a {
   color: #2563eb;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 24px;
-  background: #f1f5f9;
-  color: #64748b;
-  font-size: 0.9rem;
-}
+  text-decorati
