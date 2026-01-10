@@ -1,22 +1,16 @@
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-/* BASE */
 body {
   font-family: 'Poppins', sans-serif;
   background: #ffffff;
   color: #1e293b;
   line-height: 1.7;
-  transition: background 0.3s ease, color 0.3s ease;
+  transition: background 0.3s, color 0.3s;
 }
 
-/* NAVBAR */
+/* NAV */
 .navbar {
-  background: #ffffff;
+  background: #fff;
   border-bottom: 1px solid #e2e8f0;
   position: sticky;
   top: 0;
@@ -32,29 +26,13 @@ body {
   align-items: center;
 }
 
-.logo {
-  font-weight: 700;
-  font-size: 1.2rem;
-}
-
 .nav-links a {
-  margin-left: 22px;
+  margin-left: 20px;
   text-decoration: none;
-  font-weight: 500;
   color: #334155;
 }
 
-.nav-links a:hover {
-  color: #2563eb;
-}
-
-.theme-toggle {
-  margin-left: 18px;
-  background: none;
-  border: none;
-  font-size: 1.2rem;
-  cursor: pointer;
-}
+.theme-toggle { background: none; border: none; cursor: pointer; }
 
 /* HERO */
 .hero {
@@ -72,62 +50,52 @@ body {
 
 .badge {
   background: #14b8a6;
-  color: #ffffff;
+  color: white;
   padding: 6px 14px;
   border-radius: 999px;
   font-size: 0.85rem;
-  font-weight: 600;
-  margin-bottom: 14px;
-  display: inline-block;
 }
 
-.hero-text h1 {
-  font-size: 2.8rem;
-  font-weight: 700;
-}
-
-.subtitle {
-  font-size: 1.2rem;
-  color: #2563eb;
-  margin: 10px 0 18px;
-}
-
-.hero-summary {
-  color: #334155;
-  margin-bottom: 28px;
-  max-width: 650px;
-}
-
-/* BUTTONS */
-.hero-buttons {
+.metrics {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 10px;
+  margin: 20px 0;
 }
 
-.hero-buttons .btn {
-  padding: 12px 22px;
-  border-radius: 8px;
-  font-weight: 600;
-  text-decoration: none;
+.metrics span {
+  background: #e0e7ff;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 500;
 }
 
-.btn.primary {
+/* TIMELINE */
+.timeline {
+  position: relative;
+  margin-left: 20px;
+  border-left: 2px solid #e5e7eb;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 40px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -7px;
+  top: 6px;
+  width: 14px;
+  height: 14px;
   background: #2563eb;
-  color: #ffffff;
+  border-radius: 50%;
 }
 
-.btn.outline {
-  border: 2px solid #2563eb;
+.timeline-content h3 {
   color: #2563eb;
-}
-
-/* INFO CARD */
-.hero-info-card {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
-  padding: 22px;
 }
 
 /* SECTIONS */
@@ -137,42 +105,11 @@ body {
   padding: 80px 20px;
 }
 
-.section h2 {
-  font-size: 1.9rem;
-  margin-bottom: 30px;
-}
-
-/* EXPERIENCE CARDS */
-.card {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 14px;
-  padding: 26px;
-  margin-bottom: 26px;
-}
-
-.card h3 {
-  color: #2563eb;
-}
-
-.card span {
-  font-size: 0.9rem;
-  color: #64748b;
-}
-
-.card ul {
-  margin-top: 14px;
-  padding-left: 18px;
-}
-
-/* SKILLS */
-.light {
-  background: #f1f5f9;
-}
+.light { background: #f1f5f9; }
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(140px,1fr));
   gap: 14px;
 }
 
@@ -181,24 +118,9 @@ body {
   padding: 10px;
   border-radius: 999px;
   text-align: center;
-  font-weight: 500;
 }
 
-/* CONTACT */
-.contact a {
-  color: #2563eb;
-  text-decoration: none;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 30px;
-  background: #f1f5f9;
-  color: #64748b;
-}
-
-/* SCROLL ANIMATION */
+/* REVEAL */
 .reveal {
   opacity: 0;
   transform: translateY(30px);
@@ -218,34 +140,17 @@ body.dark {
 
 body.dark .navbar,
 body.dark .section,
-body.dark footer,
-body.dark .hero,
-body.dark .light {
+body.dark .hero {
   background: #020617;
 }
 
-body.dark .card,
-body.dark .hero-info-card {
-  background: #020617;
-  border-color: #1e293b;
-}
-
-body.dark a {
-  color: #38bdf8;
+body.dark .metrics span,
+body.dark .skills-grid span {
+  background: #1e293b;
+  color: #e5e7eb;
 }
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
-  .hero-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 600px) {
-  .hero-text h1 {
-    font-size: 2.2rem;
-  }
-  .section {
-    padding: 60px 16px;
-  }
+  .hero-grid { grid-template-columns: 1fr; }
 }
