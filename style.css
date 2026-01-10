@@ -1,16 +1,11 @@
-/* =========================
-   RESET & BASE
-========================= */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
+/* BASE */
 body {
   font-family: 'Poppins', sans-serif;
   background: #ffffff;
@@ -19,9 +14,7 @@ body {
   transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* =========================
-   NAVBAR
-========================= */
+/* NAVBAR */
 .navbar {
   background: #ffffff;
   border-bottom: 1px solid #e2e8f0;
@@ -44,11 +37,6 @@ body {
   font-size: 1.2rem;
 }
 
-.nav-links {
-  display: flex;
-  align-items: center;
-}
-
 .nav-links a {
   margin-left: 22px;
   text-decoration: none;
@@ -68,9 +56,7 @@ body {
   cursor: pointer;
 }
 
-/* =========================
-   HERO
-========================= */
+/* HERO */
 .hero {
   background: #f8fafc;
   padding: 90px 20px;
@@ -82,7 +68,6 @@ body {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 50px;
-  align-items: start;
 }
 
 .badge {
@@ -92,8 +77,8 @@ body {
   border-radius: 999px;
   font-size: 0.85rem;
   font-weight: 600;
-  display: inline-block;
   margin-bottom: 14px;
+  display: inline-block;
 }
 
 .hero-text h1 {
@@ -113,9 +98,7 @@ body {
   max-width: 650px;
 }
 
-/* =========================
-   BUTTONS
-========================= */
+/* BUTTONS */
 .hero-buttons {
   display: flex;
   flex-wrap: wrap;
@@ -127,7 +110,6 @@ body {
   border-radius: 8px;
   font-weight: 600;
   text-decoration: none;
-  display: inline-block;
 }
 
 .btn.primary {
@@ -140,9 +122,7 @@ body {
   color: #2563eb;
 }
 
-/* =========================
-   INFO CARD
-========================= */
+/* INFO CARD */
 .hero-info-card {
   background: #ffffff;
   border: 1px solid #e2e8f0;
@@ -150,9 +130,7 @@ body {
   padding: 22px;
 }
 
-/* =========================
-   SECTIONS
-========================= */
+/* SECTIONS */
 .section {
   max-width: 1100px;
   margin: auto;
@@ -164,9 +142,7 @@ body {
   margin-bottom: 30px;
 }
 
-/* =========================
-   EXPERIENCE CARDS
-========================= */
+/* EXPERIENCE CARDS */
 .card {
   background: #ffffff;
   border: 1px solid #e2e8f0;
@@ -189,9 +165,7 @@ body {
   padding-left: 18px;
 }
 
-/* =========================
-   SKILLS
-========================= */
+/* SKILLS */
 .light {
   background: #f1f5f9;
 }
@@ -210,17 +184,13 @@ body {
   font-weight: 500;
 }
 
-/* =========================
-   CONTACT
-========================= */
+/* CONTACT */
 .contact a {
   color: #2563eb;
   text-decoration: none;
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 footer {
   text-align: center;
   padding: 30px;
@@ -228,9 +198,7 @@ footer {
   color: #64748b;
 }
 
-/* =========================
-   SCROLL ANIMATIONS
-========================= */
+/* SCROLL ANIMATION */
 .reveal {
   opacity: 0;
   transform: translateY(30px);
@@ -242,9 +210,7 @@ footer {
   transform: translateY(0);
 }
 
-/* =========================
-   DARK MODE
-========================= */
+/* DARK MODE */
 body.dark {
   background: #020617;
   color: #e5e7eb;
@@ -268,62 +234,18 @@ body.dark a {
   color: #38bdf8;
 }
 
-/* =========================
-   MOBILE & TABLET
-========================= */
+/* RESPONSIVE */
 @media (max-width: 900px) {
-
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .hero-text h1 {
-    font-size: 2.4rem;
-  }
-
-  .hero-info-card {
-    max-width: 100%;
   }
 }
 
 @media (max-width: 600px) {
-
-  .nav-links a {
-    margin-left: 14px;
-    font-size: 0.9rem;
-  }
-
-  .hero {
-    padding: 70px 16px;
-  }
-
   .hero-text h1 {
-    font-size: 2.1rem;
+    font-size: 2.2rem;
   }
-
-  .subtitle {
-    font-size: 1.05rem;
-  }
-
-  .hero-summary {
-    font-size: 0.95rem;
-  }
-
   .section {
     padding: 60px 16px;
-  }
-
-  .section h2 {
-    font-size: 1.6rem;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .hero-buttons .btn {
-    text-align: center;
   }
 }
